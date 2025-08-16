@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth transitions for background changes */
+.bg-transition {
+  transition: background-position 1s ease-out, background-size 1s ease-out;
+}
+
+/* ---------- Timeline Section ---------- */
+.timeline-section {
+  padding-left: 450px;
+}
+
+/* Section heading */
+.timeline-heading {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 6rem;
+  text-align: center;
+  color: white;
+}
+
+/* Vertical central line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, white, gray, brown, skyblue);
+  z-index: 0;
+}
+
+/* Circle markers */
+.timeline-circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 5px solid #000000;
+  z-index: 1;
+}
+
+/* Left side content */
+.timeline-content-left {
+  width: 50%;
+  padding-right: 4rem;
+  text-align: right;
+  color: rgb(212, 202, 202);
+}
+
+/* Right side content */
+.timeline-content-right {
+  width: 50%;
+  padding-left: 4rem;
+  text-align: left;
+  color: rgb(212, 202, 202);
+}
+
+/* Titles (Dates) */
+.timeline-content-left h3,
+.timeline-content-right h3 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+
+/* Descriptions */
+.timeline-content-left p,
+.timeline-content-right p {
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
