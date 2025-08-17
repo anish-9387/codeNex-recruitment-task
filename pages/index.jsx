@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import { Wallpoet } from "next/font/google";
 import Link from "next/link";
@@ -94,6 +95,11 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen">
+      <Head>
+        <title>CODENEX Recruitment 2025</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
       <Navbar />
 
       {/* Fixed Background */}
